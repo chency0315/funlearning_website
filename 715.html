@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>FunLearning</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+    <link rel="stylesheet" href="../assets/dist/css/netflixcarousel.css"/>
+    
+    
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <style>
+        .happy{
+          width: 1200px;
+          margin: 0px auto;
+          overflow: hidden; /* 避免長方框下面顯示不正常 */
+        }
+        .bdcard{
+          width: 00px;
+          float:left; /* 圖片在左邊 */
+          padding: 0px;
+        }
+        .bdcard img{
+          width:1000px;
+        }
+        .bdtext{
+          float: right;  /* 文字在右邊 */
+          width: 800px;
+          padding: 0px 0px 0px 200px;
+        }
+    </style>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.6rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      #progress-bar{
+        --progress:0;
+        background: linear-gradient(0.35turn, #ffe259, #fac187,#ffa751);
+        position: fixed;
+        top:0;
+        z-index: 999;
+        height: 66px;
+        width: var(--progress);
+        display: grid;
+        
+      }
+      body{
+        background: linear-gradient(#e6e8c3, #e8ce94);
+        width: 100%;
+        padding-left:0;
+        padding-right:0;
+      }
+      #contact{
+        place-items: center;
+        box-shadow: 0 -2px 8px 8px rgba(0, 0, 0, 0.05);
+      }
+      #introtitle{
+        font-family: Arial;
+        text-align: center;
+        font-size: 45px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        word-spacing: 12px;
+      }
+      
+      .btn-secondary{
+        display: inline-block;
+        padding: 12px,36px;
+        margin:10px,0;
+        text-decoration: none;
+        overflow: hidden;
+        color: rgb(183, 45, 45);
+        text-transform: uppercase;
+        font-size: 23px;
+        letter-spacing: 1px;
+        border-radius: 50px;
+        background: linear-gradient(135deg, #FBC252 60%, #FF6E31);
+      }
+      #word_n{
+        color:white;
+        text-decoration: none;
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+    <link href="..assets/dist/css/progressbar.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>    
+      <div id='progress-bar'>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #e9b648;">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="../assets/img/LOGO.png" style="width:90px; height:50px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <!-- <a class="nav-link active"href="#">Videos</a> -->
+                </li>
+                <li class="nav-item">
+                  <!-- <a class="nav-link active"href="#">升學資訊</a> -->
+                </li>
+                <li class="nav-item">
+                  <!-- <a class="nav-link active"href="#">競賽資訊</a> -->
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <!-- <input class="form-control me-2" type="search" placeholder="search anything" aria-label="Search"> -->
+                <a class="btn btn-outline-dark " style="background-color: rgb(239, 233, 80); text-decoration:none;" type="submit" href="contact.html">Contact us</a>
+                <!-- btn-outline-success -->
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+<body>
+  <h4 id = 'introtitle' style="margin: 5% 0;">7-15 year old</h4>
+    <!-- START THE FEATURETTES -->
+    <div class="row featurette" style="margin: -2% 0;">
+      <div class="col-md-1"></div>
+      <div class="col-md-6" style="margin: 3% 0;">
+        <h2 class="featurette-heading fw-normal lh-1">RayDu English<br></h2>
+        <p class="lead">Hello, I'm Du, and I'll be sharing English on this channel through a variety of interesting topics. I hope it will rekindle your interest in learning English! Occasionally, I will also share my life through videos.
+        </p>
+        <a href="https://www.youtube.com/@rayduenglish/about" class="btn btn-secondary" style="text-decoration:none;">Take me there!</a>
+      </div>
+      <div class="col-md-5" style="margin: -10% 0;">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        <img src = '../assets/img/raydu.jpg' style="position: relative;top:200px;width:500px; height:500px; border-radius:50%;">
+      </div>
+    </div>
+    <div class="happy" style="margin: 13% 20%;">
+      <div class="bdcard">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HpAV5iIR_Ow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="bdtext">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PGfok91i100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+    
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        <img src ='../assets/img/OverSimplified.jpg' style="width:500px; height:500px; border-radius:50%;">
+      </div>
+      <div class="col-md-6" style="margin: 2% 0;">
+        <h2 class="featurette-heading fw-normal lh-1">OverSimplified<br></h2>
+        <p class="lead">Explaining things in an OverSimplified way</p>
+        <a href="https://www.youtube.com/@OverSimplified/featured" class="btn btn-secondary" style="text-decoration:none;">Take me there!</a>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="happy" style="margin: 3% 20%;">
+      <div class="bdcard">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/26EivpCPHnQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="bdtext">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hRSGxw2AQnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <footer class="container">
+      <a class=" btn float-end" style ='background: #f7cd5a 'href = "#">Back to top</a>
+      <p>&copy; FunLearning Company, Inc. &middot; <a href="#">About us</a></p>
+    </footer>
+    </div>
+  </main>
+      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      <script defer src ='../assets/dist/js/progressbar.js'></script>
+</body>

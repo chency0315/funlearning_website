@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>FunLearning</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+    <link rel="stylesheet" href="../assets/dist/css/netflixcarousel.css"/>
+    
+    
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <style>
+        .happy{
+          width: 1200px;
+          margin: 0px auto;
+          overflow: hidden; /* 避免長方框下面顯示不正常 */
+        }
+        .bdcard{
+          width: 00px;
+          float:left; /* 圖片在左邊 */
+          padding: 0px;
+        }
+        .bdcard img{
+          width:1000px;
+        }
+        .bdtext{
+          float: right;  /* 文字在右邊 */
+          width: 800px;
+          padding: 0px 0px 0px 200px;
+        }
+    </style>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.6rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      #progress-bar{
+        --progress:0;
+        background: linear-gradient(0.35turn, #ffe259, #fac187,#ffa751);
+        position: fixed;
+        top:0;
+        z-index: 999;
+        height: 88px;
+        width: var(--progress);
+        display: grid;
+        
+      }
+      body{
+        background: linear-gradient(#e6e8c3, #e8ce94);
+        width: 100%;
+        padding-left:0;
+        padding-right:0;
+      }
+      #contact{
+        place-items: center;
+        box-shadow: 0 -2px 8px 8px rgba(0, 0, 0, 0.05);
+      }
+      #introtitle{
+        font-family: Arial;
+        text-align: center;
+        font-size: 45px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        word-spacing: 12px;
+      }
+      
+      .btn-secondary{
+        display: inline-block;
+        padding: 12px,36px;
+        margin:10px,0;
+        text-decoration: none;
+        overflow: hidden;
+        color: rgb(183, 45, 45);
+        text-transform: uppercase;
+        font-size: 23px;
+        letter-spacing: 1px;
+        border-radius: 50px;
+        background: linear-gradient(135deg, #FBC252 60%, #FF6E31);
+      }
+      #word_n{
+        color:white;
+        text-decoration: none;
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+    <link href="..assets/dist/css/progressbar.css" rel="stylesheet">
+  </head>
+  <body>
+<header>    
+<div id='progress-bar'>
+  <nav class="navbar navbar-expand-md navbar-light fixed-top " style="background-color: #e9b648;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="../assets/img/LOGO.png" style="width:90px; height:50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link active"href="#">Videos</a> -->
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link active"href="#">升學資訊</a> -->
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link active"href="#">競賽資訊</a> -->
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <!-- <input class="form-control me-2" type="search" placeholder="search anything" aria-label="Search"> -->
+          <a class="btn btn-outline-dark " style="background-color: rgb(239, 233, 80); text-decoration:none;" type="submit" href="contact.html">Contact us</a>
+          <!-- btn-outline-success -->
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+</header>
+
+<main>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- <svg class="placeholder col-12 bd-bg-info" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> -->
+        <img src="../assets/img/background1.jpg" style ="width:100%" alt="first">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1 style ="text-shadow: rgb(5, 4, 4) 1px 0 10px;">Welcome to FunLearning!!</h1>
+            <p style ="text-shadow: rgb(5, 4, 4) 1px 0 10px;">This is a place for kids to explore and learn!</p>
+            <!-- <p><a class="btn btn-lg btn-primary" href="#">explore</a></p> -->
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!-- <svg class="placeholder col-12 bd-bg-info" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> -->
+        <img src="../assets/img/teach.jpg" style ="width:100%" alt="second">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1  style ="text-shadow: rgb(5, 4, 4) 1px 0 10px;">Educational videos</h1>
+            <p style ="text-shadow: rgb(12, 9, 9) 1px 0 10px;">links for teachings from professionals, come check it out!! </p>
+            <!-- <p><a class="btn btn-lg btn-primary" href="#">See more</a></p> -->
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!-- <svg class="placeholder col-12 bd-bg-info" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> -->
+        <img src ='../assets/img/college.jpg' style = "width:100%" alt="third">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1 style ="text-shadow: rgb(5, 4, 4) 1px 0 10px;">About us</h1>
+            <p style ="text-shadow: rgb(5, 4, 4) 1px 0 10px;">This website shows education resources for different ages</p>
+            <!-- <p><a class="btn btn-lg btn-primary" href="#">See more</a></p> -->
+            <!-- <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</main>
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+        <img src = '../assets/img/playtime.png' width = 150 height = 150>
+        <h2 class="fw-normal">under 5 years old</h2>
+        <p>Learn some basics before elementary school. </p>
+        <p><a class="btn btn-secondary" id="5Y" href="5years old.html" style="text-decoration:none;">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+        <img src = '../assets/img/student.png' width = 150 height = 150>
+        <h2 class="fw-normal">7-15 year old</h2>
+        <p>Learn all subjects before going to college.</p>
+        <p><a class="btn btn-secondary" id="715Y" href="715.html" style="text-decoration:none;">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+        <img src = '../assets/img/student1.png' width = 150 height = 150>
+        <h2 class="fw-normal">over 18 years old</h2>
+        <p>Find professional knowledge for your area of study!!</p>
+        <p><a class="btn btn-secondary" id="18Y" href="18.html" style="text-decoration:none;">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+    <hr class="featurette-divider">
+    <h4 id = 'introtitle'>explore popular websites</h4>
+
+    <div class="row_n">
+      <div class="row__inner">
+        <div class="tile">
+          <div class="tile__media">
+            <a href ="https://freckle.com/en-us/"><img class="tile__img" src="../assets/img/freckle-2.png" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://freckle.com/en-us/'>Freckle</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <a href="https://pbskids.org/"><img class="tile__img" src="../assets/img/pbs.jpg" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://pbskids.org/'>Pbs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <a href="https://www.sciencedirect.com/journal/life-sciences"><img class="tile__img" src="../assets/img/Live-Science-Logo.jpg" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://www.sciencedirect.com/journal/life-sciences'>Live-Science</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <a href="https://www.makemegenius.com/"><img class="tile__img" src="../assets/img/makemegenius.png" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://www.makemegenius.com/'>Makemegenius</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <a href="https://www.starfall.com/h/"><img class="tile__img" src="../assets/img/starfall-logo.jpeg" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://www.starfall.com/h/'>Starfall</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="tile">
+          <div class="tile__media">
+            <a href="https://www.ted.com/playlists/129/ted_under_20"><img class="tile__img" src="../assets/img/ted-talks-logo.jpg" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://www.ted.com/playlists/129/ted_under_20'>Ted-Talks</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <a href="https://www.discoverychannel.com.tw/"><img class="tile__img" src="../assets/img/Discovery-Channel-Logo.png" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://www.discoverychannel.com.tw/'>Discovery-Channel</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="tile">
+          <div class="tile__media">
+            <a href="https://www.codecademy.com/catalog"><img class="tile__img" src="../assets/img/code academy.png" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://www.codecademy.com/catalog'>Code-Academy</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="tile">
+          <div class="tile__media">
+            <a href="https://www.howstuffworks.com/"><img class="tile__img" src="../assets/img/hsw-logo-120x90.jpg" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://www.howstuffworks.com/'>How-Stuff-Works</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="tile">
+          <div class="tile__media">
+            <a href="https://www.popsci.com/"><img class="tile__img" src="../assets/img/popsci.png" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://www.popsci.com/'>Popsci</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <a href="https://www.gardeningknowhow.com/"><img class="tile__img" src="../assets/img/gardeningknowhow.png" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://www.gardeningknowhow.com/'>Gardeningknowhow</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <a href = 'https://www.mdnkids.com/'><img class="tile__img" src="../assets/img/mdnkids.png" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://www.mdnkids.com/'>國語日報</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <a href = 'https://www.cbeebies.com/'><img class="tile__img" src="../assets/img/bbckids.png" alt=""  /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://www.cbeebies.com/'>BBCkids</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="tile">
+          <div class="tile__media">
+            <a href = 'https://spaceplace.nasa.gov/'><img class="tile__img" src="../assets/img/nasa.png" alt="" /></a>
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              <a id = 'word_n' href = 'https://spaceplace.nasa.gov/'>NASA</a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <h4 id = 'introtitle'>fun videos</h4><br><br>
+    <div class="happy">
+      <div class="bdcard">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AjgD3CvWzS0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="bdtext">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bYE9plCf-L0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    
+    <h4 id = 'introtitle'>Educational websites</h4>
+    <!-- START THE FEATURETTES -->
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">National Geograhic kids<br><span class="text-muted">It's for kids.</span></h2>
+        <p class="lead">Visit National Geographic Kids today!</p>
+        <a href="https://kids.nationalgeographic.com/" class="btn btn-secondary" style="text-decoration:none;">Take me there!</a>
+      </div>
+      <div class="col-md-5">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        <img src = '../assets/img/national-geographic-kids-vector-logo.png' width = 500 height =500 >
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Crash Course<br><span class="text-muted">educate yourself!</span></h2>
+        <p class="lead">From courses like Astronomy to US History and Anatomy & Physiology it's got you covered with an awesome variety of AP high school curriculum topics. With various witty hosts at your service, you won't even notice you're getting smarter.</p>
+        <a href="https://thecrashcourse.com/" class="btn btn-secondary" style="text-decoration:none;">Take me there!</a>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        <img src ='../assets/img/cc.png' width = 500 height =500>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Khan academy<br><span class="text-muted">self-learning</span></h2>
+        <p class="lead">Learn for free about math, art, computer programming, economics, physics, chemistry, biology, medicine, finance, history, and more.</p>
+        <a href="https://www.khanacademy.org/" class="btn btn-secondary" style="text-decoration:none;">Take me there!</a>
+      </div>
+      <div class="col-md-5">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+        <img src = '../assets/img/khan.png' width = '500' height='500'>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <a class=" btn float-end" style ='background: #f7cd5a 'href = "#">Back to top</a>
+    <p>&copy; FunLearning Company, Inc. &middot; <a href="#">About us</a></p>
+  </footer>
+  </div>
+</main>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src ='../assets/dist/js/progressbar.js'></script>
+  </body>
+</html>
